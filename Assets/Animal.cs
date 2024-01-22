@@ -34,11 +34,13 @@ public class Animal : MonoBehaviour
 
     public virtual IEnumerator MakeSoundOnRepeat()
     {
+
         while (true)
         {
-            float RandomDelay = Random.Range(4f, 10f);
+            float RandomDelay2 = Random.Range(4f, 8f);
+            yield return new WaitForSeconds(RandomDelay2);
+
             MakeSound();
-            yield return new WaitForSeconds(RandomDelay);
 
             if (stopSound)
             {
