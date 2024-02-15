@@ -49,4 +49,9 @@ public class Animal : MonoBehaviour
             }
         }
     }
+
+    public interface IInteractable
+    {
+        void Interact();
+    }
 }

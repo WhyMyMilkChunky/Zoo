@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
-  animalName: 
+  animalName: Tiger1
   type: 2
   stopSound: 0
 --- !u!82 &167039066
@@ -283,7 +283,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2647095658dc424f9c13144f5bc8ccd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
-  animalName: 
+  animalName: Tiger2
   type: 2
   stopSound: 0
 --- !u!82 &265579968
@@ -422,7 +422,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2647095658dc424f9c13144f5bc8ccd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1720,6 +1720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553073277}
   - component: {fileID: 1553073276}
+  - component: {fileID: 1553073278}
   m_Layer: 0
   m_Name: Sign
   m_TagString: Untagged
@@ -1746,8 +1747,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.1712375, y: 2.7990146, z: 2.9344912}
-  m_Center: {x: 0.310642, y: -0.8995073, z: -6.214992}
+  m_Size: {x: 3.1712375, y: 2.7990146, z: 10.290718}
+  m_Center: {x: 0.310642, y: -0.8995073, z: -6.3255234}
 --- !u!4 &1553073277
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,7 +1758,7 @@ Transform:
   m_GameObject: {fileID: 1553073275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.2, y: 1.43, z: 11.38}
+  m_LocalPosition: {x: -9.4, y: 1.43, z: 18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1766,6 +1767,22 @@ Transform:
   - {fileID: 1071278534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1553073278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553073275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61cdbd920875ad4897003c366d0fcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0
+  animalName: Tiger Pen
+  type: 2
+  stopSound: 1
 --- !u!1 &1674019499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5214294656345822287, guid: 571d76b0c4f294349948da04bb5c1f51, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12
+      value: 14.63
       objectReference: {fileID: 0}
     - target: {fileID: 5214294656345822287, guid: 571d76b0c4f294349948da04bb5c1f51, type: 3}
       propertyPath: m_LocalRotation.w

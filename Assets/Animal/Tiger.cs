@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static Animal;
 
-public class Tiger : Animal
+public class Tiger : Animal 
 {
 
     void Start()
@@ -11,9 +13,11 @@ public class Tiger : Animal
         StartCoroutine(MakeSoundOnRepeat());
     }
 
-
     void Update()
     {
         
     }
+
+    
 }
+
