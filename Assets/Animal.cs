@@ -7,6 +7,7 @@ public enum AnimalType
 {
     Sheep,
     Giraffe,
+    Tiger,
 }
 
 public class Animal : MonoBehaviour
