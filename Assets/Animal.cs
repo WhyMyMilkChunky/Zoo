@@ -54,5 +54,12 @@ public class Animal : MonoBehaviour
     public interface IInteractable
     {
         void Interact();
+
+        
+    }
+
+    public interface TigerInteractable
+    {
+        void MyCustomInteract();
     }
 }

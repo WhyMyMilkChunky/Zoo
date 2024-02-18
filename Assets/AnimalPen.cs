@@ -11,6 +11,12 @@ public class AnimalPen : MonoBehaviour, IInteractable
 
     public TextMeshProUGUI textMesh;
 
+
+    void Update()
+    {
+        Interact();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -44,15 +50,10 @@ public class AnimalPen : MonoBehaviour, IInteractable
 
     IEnumerator ShowThenHideText(TextMeshProUGUI text, float delayTime)
     {
-        textMesh.enabled = true;
+        text.enabled = true;
         
         yield return new WaitForSeconds(delayTime);
 
-        textMesh.enabled = false;
-    }
-
-    void Update()
-    {
-        Interact();
+        text.enabled = false;
     }
 }
