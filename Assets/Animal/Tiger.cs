@@ -6,6 +6,7 @@ using static Animal;
 
 public class Tiger : Animal, TigerInteractable
 {
+    //Created by Devin Hunt(200190392).
 
     bool isInFeedRange;
     bool isCurrentlyJumping;
