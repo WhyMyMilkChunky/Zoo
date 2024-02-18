@@ -71,7 +71,7 @@ public class Tiger : Animal, TigerInteractable
                 gameObject.GetComponent<Rigidbody>().velocity = Vector3.up * jumpStrenght;
             }
             
-            Debug.Log("The player has feed the Tigers and they're happy");
+            Debug.Log("The player has feed the" + gameObject.name + " and they're happy");
         }
         isCurrentlyJumping = false;
     }
