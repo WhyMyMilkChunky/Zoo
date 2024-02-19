@@ -15,11 +15,9 @@ public class Tiger : Animal, TigerInteractable
     
     public float jumpDelayTime;
     public float strenghtOfJump;
-    public float tossSpeed;
 
     public GameObject tigerFood;
 
-    public Transform playerPos;
     
 
     void Start()
@@ -62,9 +60,8 @@ public class Tiger : Animal, TigerInteractable
 
             StartCoroutine(ApplyJumpEffect(numberOfJumpsRange, jumpDelayTime, strenghtOfJump, gameObject));
 
-            if (isCurrentlyJumping)
+            if (isCurrentlyJumping && tigerFood !=null)
             {
-
                 SpawnFood(tigerFood, gameObject.transform.position + new Vector3(0.0f, 2.0f, -5.0f));
             }
         }
@@ -94,6 +91,6 @@ public class Tiger : Animal, TigerInteractable
     {
         GameObject newprojectile = Instantiate(food, destination, Quaternion.Euler(90f, 0.0f, 0.0f));
        
-        Destroy(newprojectile, 3.0f);
+        Destroy(newprojectile, 5.0f);
     }
 }
