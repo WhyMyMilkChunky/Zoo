@@ -88,4 +88,6 @@ public class Cow : Animal, CowInteractable
 
         Destroy(newObject, 4f);
     }
+
+    public override void PenInteraction() { }
 }
