@@ -42,7 +42,7 @@ public class AnimalPen : MonoBehaviour, IInteractable
         {
             if (textMesh != null)
             {
-                StartCoroutine(ShowThenHideText(textMesh, 2.0f));
+                StartCoroutine(ShowThenHideText(textMesh, 3.0f));
             }
                                   
             Debug.Log("The player has interacted with the Animal Pen");                    
