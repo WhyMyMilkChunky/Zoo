@@ -1,7 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using static Animal;
 
-public class Cow : Animal
+public class Cow : Animal, CowInteractable
 {
     private bool isRotating = false;
     private bool isInTriggerZone = false;
@@ -17,7 +18,7 @@ public class Cow : Animal
     {
         if (isInTriggerZone && Input.GetKeyDown(KeyCode.Space) && !isRotating)
         {
-            Rotate();
+            Milking(); 
             milkBucket();
         }
     }
@@ -38,7 +39,7 @@ public class Cow : Animal
         }
     }
 
-    void Rotate()
+    public void Milking() 
     {
         StartCoroutine(RotationCoroutine());
     }
@@ -48,7 +49,7 @@ public class Cow : Animal
         isRotating = true;
 
         Quaternion startRotation = transform.rotation;
-        Quaternion endRotation = Quaternion.Euler(-70f, 0f, 180f); 
+        Quaternion endRotation = Quaternion.Euler(-70f, 0f, 180f);
 
         float duration = 2f;
         float elapsedTime = 0f;
@@ -84,7 +85,7 @@ public class Cow : Animal
     void milkBucket()
     {
         GameObject newObject = Instantiate(bucket, transform.position - new Vector3(2.5f, 3f, 1f), Quaternion.identity);
-        
+
         Destroy(newObject, 4f);
     }
 }

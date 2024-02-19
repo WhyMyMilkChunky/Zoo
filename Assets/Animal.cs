@@ -62,4 +62,8 @@ public class Animal : MonoBehaviour
     {
         void MyCustomInteract();
     }
+     public interface CowInteractable
+    {
+        void Milking();
+    }
 }
