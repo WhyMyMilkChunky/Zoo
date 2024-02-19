@@ -6,6 +6,11 @@ public class Giraffe : Animal
     {
         GetAnimalComponents();
         StartCoroutine(MakeSoundOnRepeat());
+    }
 
+    public override void PenInteraction()
+    {
+        Feed();
+        Debug.Log("Griaffe eat");
     }
 }

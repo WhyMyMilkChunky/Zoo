@@ -11,6 +11,8 @@ public class AnimalPen : MonoBehaviour, IInteractable
     [SerializeField] bool isInRange;
 
     public TextMeshProUGUI textMesh;
+    public GameObject animal;
+  
 
 
     void Update()
@@ -44,10 +46,11 @@ public class AnimalPen : MonoBehaviour, IInteractable
             {
                 StartCoroutine(ShowThenHideText(textMesh, 3.0f));
             }
-                                  
+            animal.GetComponent<Animal>().PenInteraction();
             Debug.Log("The player has interacted with the Animal Pen");                    
         } 
     }
+
 
     IEnumerator ShowThenHideText(TextMeshProUGUI text, float delayTime)
     {

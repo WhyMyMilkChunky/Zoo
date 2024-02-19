@@ -11,9 +11,8 @@ public class Sheep : Animal
         StartCoroutine(MakeSoundOnRepeat()); 
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void PenInteraction()
     {
-        
+
     }
 }

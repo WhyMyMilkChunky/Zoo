@@ -93,4 +93,8 @@ public class Tiger : Animal, TigerInteractable
        
         Destroy(newprojectile, 4.0f);
     }
+    public override void PenInteraction()
+    {
+
+    }
 }
