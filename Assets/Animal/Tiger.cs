@@ -91,6 +91,6 @@ public class Tiger : Animal, TigerInteractable
     {
         GameObject newprojectile = Instantiate(food, destination, Quaternion.Euler(90f, 0.0f, 0.0f));
        
-        Destroy(newprojectile, 5.0f);
+        Destroy(newprojectile, 4.0f);
     }
 }
