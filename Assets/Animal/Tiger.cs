@@ -10,9 +10,16 @@ public class Tiger : Animal, TigerInteractable
 
     bool isInFeedRange;
     bool isCurrentlyJumping;
+    
     public int numberOfJumpsRange;
+    
     public float jumpDelayTime;
     public float strenghtOfJump;
+    public float tossSpeed;
+
+    public GameObject tigerFood;
+
+    public Transform playerPos;
     
 
     void Start()
@@ -53,12 +60,18 @@ public class Tiger : Animal, TigerInteractable
            
             isCurrentlyJumping = true;
 
-            StartCoroutine(ApplyJumpEffect(numberOfJumpsRange, jumpDelayTime, strenghtOfJump, gameObject));         
+            StartCoroutine(ApplyJumpEffect(numberOfJumpsRange, jumpDelayTime, strenghtOfJump, gameObject));
+
+            if (isCurrentlyJumping)
+            {
+
+                SpawnFood(tigerFood, gameObject.transform.position + new Vector3(0.0f, 2.0f, -5.0f));
+            }
         }
     }
 
     IEnumerator ApplyJumpEffect(int repeatValue, float delayTime, float jumpStrenght, GameObject gameObject)
-    {
+    {       
         repeatValue = Random.Range(1, repeatValue);
         
         for (int i = 0; i < repeatValue; i++) 
@@ -75,5 +88,12 @@ public class Tiger : Animal, TigerInteractable
             Debug.Log("The player has feed the" + gameObject.name + " and they're happy");
         }
         isCurrentlyJumping = false;
+    }
+
+    void SpawnFood(GameObject food, Vector3 destination)
+    {
+        GameObject newprojectile = Instantiate(food, destination, Quaternion.Euler(90f, 0.0f, 0.0f));
+       
+        Destroy(newprojectile, 3.0f);
     }
 }

@@ -279,6 +279,9 @@ MonoBehaviour:
   numberOfJumpsRange: 3
   jumpDelayTime: 3
   strenghtOfJump: 3
+  tossSpeed: 3
+  tigerFood: {fileID: 7615387753059313731, guid: c83707e26644f624e895a2c4974fc685, type: 3}
+  playerPos: {fileID: 958312699}
 --- !u!82 &167039066
 AudioSource:
   m_ObjectHideFlags: 0
@@ -479,6 +482,9 @@ MonoBehaviour:
   numberOfJumpsRange: 3
   jumpDelayTime: 3
   strenghtOfJump: 3
+  tossSpeed: 0
+  tigerFood: {fileID: 0}
+  playerPos: {fileID: 0}
 --- !u!82 &265579968
 AudioSource:
   m_ObjectHideFlags: 0
