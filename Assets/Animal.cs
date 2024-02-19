@@ -20,7 +20,6 @@ public abstract class Animal : MonoBehaviour
 
     public AnimalType type;
     public bool stopSound = false;
-    private GameObject currentFood;
     public void GetAnimalComponents()
     {
         audioSource = GetComponent<AudioSource>();
@@ -35,9 +34,13 @@ public abstract class Animal : MonoBehaviour
     public void Feed()
     {
         Vector3 spawnPosition = transform.position - transform.right * 5f;
-        currentFood = Instantiate(Food, spawnPosition, Quaternion.identity);
+        GameObject currentFood = Instantiate(Food, spawnPosition, Quaternion.identity);
         Spin();
-        Eat(currentFood);
+        StartCoroutine(Eat(currentFood));
+    }
+    public virtual void Jump()
+    {
+
     }
 
     IEnumerator Eat(GameObject food)
